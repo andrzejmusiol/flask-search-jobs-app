@@ -1,0 +1,147 @@
+:root {
+	/* FONTS */
+	--small: 16px;
+	--normal: 22px;
+	--huge: 30px;
+
+	/* FONT WEIGHT */
+	--light: 300;
+	--bold: 700;
+	--extra-bold: 800;
+
+	/* COLORS */
+	--basic: #6a67ce;
+	--light-grey: #e6e6e6;
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+input:focus, input:active {
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+/* SITE */
+.site-title h1 {
+	font-size: var(--huge);
+	font-weight: var(--extra-bold);
+}
+
+.site-title h2 {
+	font-size: var(--normal);
+	font-weight: var(--bold);
+}
+
+.site-title p {
+	font-size: var(--small);
+	font-weight: var(--light);
+}
+
+/* SEARCH */
+.search-form .input label {
+	font-weight: var(--bold);
+	color: var(--basic);
+}
+
+.search-form .input input {
+	padding: 5px;
+	font-weight: var(--light);
+	border: 1px solid var(--light-grey);
+	border-radius: 5px;
+}
+
+.search-form .input.submit input {
+	color: #fff;
+	font-weight: var(--bold);
+	background: var(--basic);
+	padding: 10px 20px;
+	transition: .3s all ease;
+}
+
+.search-form .input.submit input:hover {
+	background: #fff;
+	color: var(--basic);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.searching-for h3{
+	font-size: var(--normal);
+	font-weight: var(--bold);
+	color: var(--basic);
+}
+
+/* JOB OFFER */
+.job-container {
+	background: #fff;
+	margin: 10px;
+	border: 1px solid var(--light-grey);
+	border-radius: 5px;
+	transition: .3s all ease;
+}
+
+.job-container:hover {
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-container .company img {
+	width: 80px;
+	height: auto;
+}
+
+.job-container .company a span{
+	font-size: var(--small);
+	color: #000;
+	font-weight: var(--bold);
+}
+
+.job-container .job-title {
+	font-size: var(--normal);
+	font-weight: var(--extra-bold);
+}
+
+.job-container .job-type {
+	font-size: var(--small);
+	font-weight: var(--light);
+}
+
+.job-container a.job-link {
+	display: inline-block;
+	color: #000;
+	border: 1px solid var(--light-grey);
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin-right: 10px;
+	font-weight: var(--bold);
+}
+
+.job-container a.job-link:hover {
+	color: #fff;
+	background: var(--basic);
+	transition: .3s all ease;
+}
+
+.not-found h3{
+	font-weight: var(--extra-bold);
+	font-size: var(--huge);
+}
+
+.not-found a {
+	color: var(--basic);
+	font-weight: var(--bold);
+	font-size: var(--normal);
+}
+
+@media(max-width: 992px) {
+    .job-container {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}

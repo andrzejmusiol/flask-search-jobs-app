@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<div class="site-title text-center my-5">
+		<h1>GitHub Jobs</h1>
+		<h2>Znajdź pracę na portalu GitHub</h2>
+		<p>Wszystkie ogłoszenia w jednym miejscu!</p>
+	</div>
+	<div class="searching-for text-center my-5">
+		<h3>Szukasz ogłoszeń dla: {{tech.title()}}, w lokalizacji: {{loc.title()}}</h3>
+	</div>
+	{% if jobs |length == 0 %}
+	<div class="not-found text-center">
+		<h3>Przykro nam, nie znaleziono ofert w tej lokalizacji. Spróbuj ponownie</h3>
+		<a href="/">Powrót</a>
+	</div>
+
+	{% else %}
+	<div class="row no-gutters d-flex justify-content-center flex-wrap">
+		{% for job in jobs %}
+		<div class="job-container col-lg-3 col-12 px-5 py-5 mx-4 my-4">
+			<div class="company">
+				<a target="_blank" href="{{job.company_url}}">
+					{% if job.company_logo %}
+					<img src="{{job.company_logo}}" alt="Company Logo">
+					{% else %}
+					<span>Brak logo</span>
+					{% endif %}
+				</a>
+				<p>{{job.company}}</p>
+			</div>
+			<div class="job-title">{{job.title}}</div>
+			<div class="job-type my-3">{{job.type}}</div>
+			<a class="job-link" target="_blank" href="{{job.url}}">Aplikuj</a>
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+
+{% endblock %}
