@@ -1,6 +1,6 @@
 # imports
-from flask import Flask, render_template, jsonify, request
-from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
+from flask import Flask, render_template, request
+from wtforms import Form, TextField, validators, StringField, SubmitField
 from models import *
 
 # zmienna aplikacji
@@ -22,14 +22,14 @@ class SearchForm(Form):
 def search_resluts():
 
 	if request.method == 'POST':
-		language=request.form['tech']
-		location=request.form['place']
-		response(language, location)
+		description = request.form['tech']
+		location = request.form['place']
+		response(description, location)
 
 	with open('jobs.json', encoding="utf-8") as jobs_file:
 		jobs = json.load(jobs_file)
 
-	return render_template('results.html', jobs = jobs, tech = language, loc = location)
+	return render_template('results.html', jobs = jobs, tech = description , loc = location)
 
 # debug
 if __name__=='__main__':

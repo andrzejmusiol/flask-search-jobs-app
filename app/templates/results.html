@@ -7,7 +7,11 @@
 		<p>Wszystkie ogłoszenia w jednym miejscu!</p>
 	</div>
 	<div class="searching-for text-center my-5">
-		<h3>Szukasz ogłoszeń dla: {{tech.title()}}, w lokalizacji: {{loc.title()}}</h3>
+		<h3>Szukasz ogłoszeń dla: {{tech.title()}}
+			{% if loc %}
+			, w lokalizacji: {{loc.title()}}
+			{% endif %}
+		</h3>
 	</div>
 	{% if jobs |length == 0 %}
 	<div class="not-found text-center">
