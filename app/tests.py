@@ -7,4 +7,4 @@ class ResponseTestCase(unittest.TestCase):
 		response_final_result = response('javascript', 'california')
 		self.assertEqual(response_final_result.status_code, 200)
 
-unittest.main()
+unittest.main() 
