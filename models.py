@@ -1,5 +1,4 @@
 import requests
-import json
 # Funkcja pobierająca dane w JSON i zapisująca je lokalnie
 def response(description, location):
 	if (description and location):
