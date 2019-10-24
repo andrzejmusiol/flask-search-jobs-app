@@ -13,6 +13,3 @@ def response(description, location):
 		file.write(response_result.text)
 
 	return response_result
-
-
-print(response('java', 'california'))
