@@ -1,7 +1,7 @@
 # Flask search jobs app
 
 ### See live:
-[https://dashboard.heroku.com/apps/serach-jobs-app]
+[https://serach-jobs-app.herokuapp.com/]
 
 ## General info
 Flask Jobs App, is made with Pyhon 3.7, and Flask microframework.
