@@ -1,9 +1,7 @@
-# Python resources feed
+# Flask search jobs app
 
 ### See live:
 [https://dashboard.heroku.com/apps/serach-jobs-app]
-
-## Search app to find job on GitHubJobs.
 
 ## General info
 Flask Jobs App, is made with Pyhon 3.7, and Flask microframework.
