@@ -7,7 +7,7 @@
 
 ## General info
 Flask Jobs App, is made with Pyhon 3.7, and Flask microframework.
-Application takes Techonology and Location datas to get JSON file from GitHub Jobs API
+Application takes Techonology and Location datas to get JSON file from GitHub Jobs API. JSON file is getting formated on front-end, to display nice job containers.
 
 ## Technologies & requirements
 * certifi==2019.9.11
