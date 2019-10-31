@@ -1,14 +1,14 @@
 # imports
 from flask import Flask, render_template, request
 from wtforms import Form, TextField, validators, StringField, SubmitField
-from models import getResponseFromApi, saveToJson, readFromJson
+from scripts import getResponseFromApi, saveToJson, readFromJson
 
 app = Flask(__name__)
 
 # home
 class SearchForm(Form):
 	# create the fiels
-	tech = TextField('Technologia:',  validators=[validators.required()])
+	technology = TextField('Technologia:',  validators=[validators.required()])
 	place = TextField('Lokalizacja:')
 
 @app.route('/')
@@ -22,7 +22,7 @@ def search_resluts():
 
 	if request.method == 'POST':
 		#Get data from forms input
-		description = request.form['tech']
+		description = request.form['technology']
 		location = request.form['place']
 		#Pass data to function and get the request
 		saveToJson(description, location)
@@ -32,6 +32,5 @@ def search_resluts():
 
 	return render_template('results.html', jobs = all_jobs, description = description , location = location)
 
-# debug
 if __name__=='__main__':
 	app.run(debug=True)

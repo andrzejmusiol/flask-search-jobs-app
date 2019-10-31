@@ -13,6 +13,7 @@ def getResponseFromApi(description, location):
 	}
 
 	response_result = requests.get(basic_url, params = params_to_pass)
+	return response_result
 
 # Save response data to JSON file
 def saveToJson(description, location):
