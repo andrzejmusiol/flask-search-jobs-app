@@ -18,7 +18,7 @@ def index():
 
 #results
 @app.route('/results', methods=('GET', 'POST'))
-def search_resluts():
+def search_resluts(): 
 
 	if request.method == 'POST':
 		#Get data from forms input
