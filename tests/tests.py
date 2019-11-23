@@ -5,7 +5,7 @@ sys.path.append('..')
 import unittest
 from application.scripts import getResponseFromApi, saveToJson, readFromJson
 
-class modelsTestCase(unittest.TestCase):
+class scriptsTestCase(unittest.TestCase):
 
 	def test_saveToJson(self):
 		response_final_result = getResponseFromApi('javascript', 'california')
